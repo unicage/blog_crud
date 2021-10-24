@@ -1,0 +1,20 @@
+{% load static%}
+<html>
+<head>
+    <title>Blog of Ulugbek</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <h1><a href="{% url 'home' %">Ulugbek's Blog</a> </h1>
+</header>
+<div>
+    {% block content %}
+    {% endblock content%}
+</div>
+</body>
+</html>
