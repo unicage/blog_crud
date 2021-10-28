@@ -8,27 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Qahiri&display=swap" rel="stylesheet">
 </head>
 <body>
-<div>
     <header>
-        <div class="nav-left">
-            <h1><a href="{% url 'home' %}">Save your thoughts!</a> </h1>
-        </div>
-        <div class="nav-right">
-            <a href="{% url 'post_new' %}"> + New Blog Post</a>
+        <div class="container">
+            <div class="navigation">
+                <div class="nav-left">
+                    <h1><a href="{% url 'home' %}">Save your thoughts!</a> </h1>
+                </div>
+                <div class="registration">
+                    <div class="login-signup">
+                        <a href="{% url 'login' %}">Log In</a>
+                        <a href="{% url 'signup' %}">Sign Up</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    {% if user.is_authenticated %}
-    <p>Good day {{ user.username }}</p>
-    <p><a href="{% url 'logout' %}">Log out</a> </p>
-    {% else %}
-    <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a>
-    <p> </p>
-    <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
-    {% block content %}
-    {% endblock content%}
-</div>
+    <div class="main-section">
+        <div class="container">
+            {% if user.is_authenticated %}
+                <p>Good day {{ user.username }}</p>
+                <p><a href="{% url 'logout' %}">Log out</a> </p>
+            {% else %}
+                <div>
+                    <p>You are not logged in</p>
+                </div>
+            {% endif %}
+
+            {% block content %}
+            {% endblock content%}
+            <div class="add-blog">
+                <a href="{% url 'post_new' %}"> New Blog Post</a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

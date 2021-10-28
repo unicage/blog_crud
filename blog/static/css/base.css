@@ -2,48 +2,89 @@ body {
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
 }
+.container{
+	width: 80%;
+	margin: 20px auto;
+}
 
 header {
 	border-bottom: 1px solid #999;
 	margin-bottom: 2rem;
 	display: flex;
+	background: #3474eb;
 }
-
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.registration{
+	display: flex;
+}
 header h1 a {
-	color: red;
+	color: #fff;
 	text-decoration: none;
 }
-
-.nav-left {
-	margin-right: auto;
+.login-signup{
+	margin: 0 15px;
 }
+.login-signup a{
+	color: #3474eb;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	text-decoration: none;
+	margin: 0 15px;
 
-.nav-right {
-	display: flex;
-	padding-top: 2rem;
 }
-
+.main-section{
+	background-color: #fff;
+}
 .post-entry {
-	margin-bottom: 2rem;
+	padding: 20px 15px;
+	margin: 2rem 0;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 1px 22px 43px 2px rgba(34, 60, 80, 0.2);
+	transition: all 0.5s;
 }
 
 .post-entry h2 {
-	margin: 0.5rem 0;
+	padding: 10px 0;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin: 10px 250px;
+	border-bottom: 1px solid #3474eb;
 }
-
-.post-entry h2 a,
-.post-entry h2 a:visited {
-	color: blue;
+.post-entry h2 a{
 	text-decoration: none;
+	color: #3474eb;
 }
-
 .post-entry p {
 	margin: 0;
+	font-size: 20px;
 	font-weight: 400;
 }
-
-.post-entry h2 a:hover {
-	color: red;
+.post-entry:hover{
+	transform: scale(1.1);
 }
-
-
+.add-blog {
+	margin: 80px 0;
+	text-align: center;
+}
+.add-blog a{
+	padding: 15px 35px;
+	background-color:  #3474eb;
+	color: #fff;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: all 0.5s;
+	border: 1px solid #3474eb;
+}
+.add-blog a:hover{
+	color: #3474eb;
+	background-color: #fff;
+	transform: scale(1.1);
+}
